@@ -2,7 +2,7 @@
 
 Run the project in a local server and open the /index.html
 
-There are too ajax files to test localy. Type "api/response.json" or "api/response.xml" in the input text field and choose the correct format.
+There are too ajax files to test locally. Type "api/response.json" or "api/response.xml" in the input text field and choose the correct format.
 
 
 # FOR RUNNING TESTS
