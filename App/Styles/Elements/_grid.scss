@@ -1,0 +1,49 @@
+[class^="col-"],
+[class*="col-"] {
+    border: 0px;
+    float: left;
+    margin: 0px;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.col-3 { width: 25%; }
+.col-4 { width: 33.33333333%; }
+.col-5 { width: 41.66666667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33333333%; }
+.col-8 { width: 66.66666667%; }
+.col-9 { width: 75%; }
+.col-12 { width: 100%; }
+
+.grid-wrpp{
+    &:after, &:before {
+        display: table;
+        content: " ";
+        clear:both;
+    }
+    &.add-space{
+        margin-left: -30px;
+        & [class*="col-"]{
+            padding-left: 30px;
+        }
+    }
+}
+
+.col-center { text-align: center;}
+
+.col-invert {
+    float: right;
+    text-align: right;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    max-width: $base-max-width;
+    min-width: $base-min-width;
+    position:relative;
+}
+

@@ -1,0 +1,64 @@
+/*
+######################################################
+FORMS
+######################################################
+*/
+/* do not group these rules */
+*::-webkit-input-placeholder {
+  color: $color-placeholder;
+}
+*:-moz-placeholder {
+  color: $color-placeholder;
+}
+*:-ms-input-placeholder { /* IE10+ */
+  color: $color-placeholder;
+}
+
+.form-block {
+    margin: 20px 0 0;
+    position: relative;
+    & .placeholder{
+        display: none;
+        font-weight: 700;
+    }
+    & label{
+        display: block;
+        font-weight: 200;
+        margin-bottom: 5px;
+        color: darken($color-positive, 30%);
+    }
+
+    // inputs
+    & input[type="text"], & input[type="password"], & select, & textarea{
+        @each $attr, $values in $form-input-attr {
+            #{$attr} : $values; 
+        }
+        resize: none;
+        
+        &:focus{
+            background-color: white;
+            border-color: $form-color-focus;
+        }
+        
+    }
+    & select{
+        padding: 9px 10px;
+    }
+    & .radio-wrpp{
+        & input[type="checkbox"], & input[type="radio"]{
+            display: inline-block;
+            cursor: pointer;
+            
+        }
+        & span.radio-label{
+            margin-left: 20px;
+            display: block;
+            margin-top: -19px;
+            font-weight: normal;
+        }
+        & label{
+            cursor: pointer;
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'fonticons';
+	src:url('Fonts/fonticons.eot?rhalyk');
+	src:url('Fonts/fonticons.eot?rhalyk#iefix') format('embedded-opentype'),
+		url('Fonts/fonticons.ttf?rhalyk') format('truetype'),
+		url('Fonts/fonticons.woff?rhalyk') format('woff'),
+		url('Fonts/fonticons.svg?rhalyk#fonticons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	font-family: 'fonticons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+	content: "\e800";
+}

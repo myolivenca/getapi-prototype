@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 'Appear Here' Challenge</title>
+    <meta name="description" content="The HTML5 'Appear Here' Challenge">
+    <meta name="author" content="Pedro Olivença">
+    <link href="https://a3.ah-assets.net/assets/favicon-168e99f8c3668b85e05faa1e24ee0b3b.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+    <!-- styles here -->
+    <link href="Styles/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="Header">
+        <div class="container">
+            <img src="Images/logo.png">
+            <br>
+            <h1>Display Api Response</h1>
+        </div>
+    </div>
+    <div class="Content">
+        <div class="container">
+            <div class="grid-wrpp add-space">
+                <div class="col-8">
+                    <div class="form-block">
+                        <label>place api url here</label>
+                        <input id="apiUrl" type="text" value="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-block">
+                        <label>choose format</label>
+                        <select id="selectFormat">
+                            <option value=""></option>
+                            <option value="xml">XML</option>
+                            <option value="json">JSON</option>
+                        </select>
+                    </div>
+                    <div class="form-block">
+                        <a href="#" class="btn btn-primary" id="btLoadApi">load api</a>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="form-block">
+                        <label>Response from the api</label>
+                        <pre id="apiResponse">
+                            <code>
+                            
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- scripts here -->
+    <script src="Scripts/Vendor/jquery.min.js"></script>
+    <!-- https://highlightjs.org/ -->
+    <script src="Scripts/Vendor/highlight.min.js"></script>
+    <script src="Scripts/App/Common/utils.js"></script>
+    <script src="Scripts/App/getRepo/getRepo.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+        
+        $('#btLoadApi').on('click',function(){
+            var element = $('#apiUrl');
+            var format = $('#selectFormat')
+            var writeOn = $('#apiResponse code');
+            getRepo(element, format, writeOn);
+            return false;
+        });
+    </script>
+</body>
+
+</html>

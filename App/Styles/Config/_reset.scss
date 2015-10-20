@@ -1,0 +1,157 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html,
+body,
+span,
+p {
+    font-family: $font-family;
+}
+
+html,
+body {
+    @include font-size;
+    height: 100%;
+    width: 100%; 
+    background-color: lighten($color-negative, 10%);
+}
+
+span,
+p {
+    font-size: inherit;
+}
+
+article, 
+aside, 
+figure, 
+footer, 
+header, 
+hgroup, 
+nav, 
+section {
+    display: block;
+}
+
+html {overflow-y: scroll;}
+
+div { display: block; }
+
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+ol {
+    margin-left: 22px;
+}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    color: $color-link;
+    text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: darken($color-link, 10%);
+        }
+    }
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+table {border-collapse: collapse; border-spacing: 0;}
+   
+input, select {vertical-align: middle;}
+
+input[type="radio"] {vertical-align: text-bottom;}
+
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+
+select, input, textarea {  outline:none;}
+
+a:hover, a:active {outline: none;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {top: -0.5em;}
+
+sub {bottom: -0.25em;}
+
+pre, 
+code, 
+kbd, 
+samp {font-family: monospace, sans-serif;}
+
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+button, input, select, textarea {margin: 0;}
+
+button {width: auto; overflow: visible;}
+
+::-moz-selection{
+    background: $color-input-select;
+    color: $color-positive; 
+    text-shadow: none;
+}
+
+::selection {
+    background: $color-input-select;
+    color: $color-positive;
+    text-shadow: none;
+} 
+
+   
+a:link {-webkit-tap-highlight-color: #0c8bcd; } 
+
+ins {
+    background-color: $color-input-select;
+    color: $color-negative;
+    text-decoration: none;
+}
+
+mark {
+    background-color: $color-input-select;
+    color: $color-negative;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+button:focus { outline:none;}
+
+*:focus  
+{  
+    outline: none; 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+th {
+    text-align: left;
+}

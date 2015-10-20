@@ -1,0 +1,5 @@
+@mixin font-size($value: 0 , $padd: 0){
+    font-size: $base-font-size + $value;
+    line-height: round($base-font-size + $value + (($base-font-size + $value) * 0.4));
+    padding: $padd;
+}

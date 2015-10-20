@@ -1,0 +1,27 @@
+.Footer{
+    color: $color-positive;
+    border-top: 10px solid rgba($color-negative, 0.3);
+    width: 100%;
+    padding: 5% 0;
+    & .brand{
+        max-width: 100%;
+        width: 40%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    &.pos{
+        margin-top: 3%;
+        color: $color-positive;
+        padding-bottom: 20px;
+    }
+    & ul{
+        display: table;
+        text-align: center;
+        margin: 0 auto;
+        & li{
+            display: inline-block;
+            padding: 0 5px;
+        }
+    }
+
+}

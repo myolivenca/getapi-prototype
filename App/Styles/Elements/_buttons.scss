@@ -1,0 +1,42 @@
+.btn {
+    @each $attr, $values in $button-attr {
+        #{$attr} : $values; 
+    }
+    @include font-size(0, 5px 8px);
+    &:hover {
+        background: transparent none;
+        text-decoration: none;
+        color: lighten($color-negative, 20%);
+    }
+}
+
+/* add a right padd */
+.btn-mrg{
+    margin-right: 10px;
+}
+    
+/* create button sizes */
+@each $name, $values in $element-sizes {
+    $sizes : nth($values, 1);
+    $padding : nth($values, 2);
+    .btn-#{$name}{
+        @include font-size($sizes, $padding);
+        }
+    }
+
+/* create button color types */
+@each $name, $values in $button-colors {
+    $color: nth($values, 1);
+    $bkcolor : nth($values, 2);
+    $bdrcolor : nth($values, 3);
+    $hover: nth($values, 4);
+    .btn-#{$name}{
+        background-color: $bkcolor;
+        border-color: $bdrcolor;
+        color: $color; 
+        &:hover{
+            background-color: $hover;
+            color: $bkcolor;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.clearfix:before, .clearfix:after { content: ""; display: block; height: 0; overflow: hidden; } 
+ 
+.clearfix:after { clear: both; }
+  
+.clearfix { zoom: 1; } 
+
+.clear{ clear: both; display: block;} 
+
+.float-lft {float:left}
+
+.float-rgt {float:right}
+
+.hide { display: none }
+
+.show { display: block; }
+
+/*
+#########################################################
+TXT- classes As $ELEMENT-SIZES MAP
+#########################################################
+*/
+@each $name, $values in $element-sizes {
+    $sizes : nth($values, 1);
+    .txt-#{$name}{
+        @include font-size($sizes);
+        }
+    }
+
+@each $name, $values in $txt-colors {
+    $color : nth($values, 1);
+    .txt-#{$name}{
+        color: $color;
+        }
+    }
+
+
+/*
+#########################################################
+QUICK MOBILE BEHAVIOR
+#########################################################
+*/
+.mobile-blk-on,
+.mobile-on {
+    display: none;
+}
+
+/*
+#########################################################
+COMMON
+#########################################################
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 { 
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    font-weight: 300;
+}
+
+h1,
+.h1 {
+    @include font-size(26);
+}
+
+h2,
+.h2{
+    @include font-size(16);
+}
+
+h3,
+.h3 { 
+    @include font-size(12);
+}
+
+h4,
+.h4 {
+    @include font-size(8);
+}
+
+h5,
+.h5 {
+    @include font-size(4);
+}
+
+
+main{
+    position:relative;
+    z-index:5;
+}
+
+header {
+    position:relative;
+    z-index: 6;
+}

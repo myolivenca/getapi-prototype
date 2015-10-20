@@ -1,0 +1,32 @@
+/*
+#########################################################
+PEDRO OLIVENÇA 2015  
+OOCSS via Sass
+#########################################################
+*/
+/* CONFIG */
+@import 'Config/_variables'; //main variables
+@import 'Config/_mixins'; //custom mixins
+@import 'Config/_reset'; //reset browsers
+
+/* FONTS */
+@import 'Elements/_fontIcomoon';  
+
+/* VENDOR STYLES */
+@import 'Vendor/_highlight'; //jquery.highlight
+
+/* ELEMENTS */
+@import 'Elements/_utils'; // useful quick/commom classes
+@import 'Elements/_grid'; //grid structure
+@import 'Elements/_forms'; //default forms
+@import 'Elements/_buttons'; //default buttons
+
+  
+/* MODULES */
+@import 'Modules/_header'; // header css
+@import 'Modules/_footer'; // footer css
+@import 'Modules/_content'; // content css
+
+
+/* RESPONSIVE */
+@import '_responsive';
